@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/netflix_app_2022/static/css/main.74468346.css",
+    "main.js": "/netflix_app_2022/static/js/main.941253dc.js",
+    "index.html": "/netflix_app_2022/index.html",
+    "main.74468346.css.map": "/netflix_app_2022/static/css/main.74468346.css.map",
+    "main.941253dc.js.map": "/netflix_app_2022/static/js/main.941253dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74468346.css",
+    "static/js/main.941253dc.js"
+  ]
+}
