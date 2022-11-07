@@ -1,70 +1,11 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 수정사항
+1. Play 버튼을 눌렀을 때 영상 소스가 없으면 에러메세지와 함께 5초 후 홈으로 리다이렉트
+2. More Information 버튼을 누르면 DetailPage로 이동
+3. Banner에 text-shadow 구현 (배경이 흰색일 경우 가독성이 떨어지는 것을 보완)
+4. 검색창에 텍스트를 입력 후 완전히 지웠을 때 홈으로 이동
+5. 검색창에 텍스트가 있을 경우 엔터 키를 누르면 검색이 되게 구현 (SearchPage에서 DetailPage로 이동했을 때 input에는 텍스트가 남아있는데, 다시 원래 SearchPage로 돌아가고 싶을 때를 위해서 기능을 구현함)
+6. SearchPage에서 목록들을 hover했을 때 간단한 영화 정보가 보이게 구현
+7. DetailPage에서 포스터를 포함 자세한 영화 정보가 표시되게 구현 (장르 추가)
+<!-- 8. MovieModal 및 DetailPage에 Play 버튼 구현: 버튼을 누르면 포스터 대신 Iframe 실행 -->
+9. firebase 기반 로그인 페이지 제작 / 이메일 및 구글 계정을 이용하여 가입 및 로그인
+10. 홈 화면에서 우측 상단의 프로필 이미지를 누르면 로그아웃이 되도록 구현

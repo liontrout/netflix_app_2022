@@ -57,6 +57,14 @@
   font-size: 20px;
   line-height: 1.5;
 }
+.modal__genres span{
+  color: #4fc2ef;
+  line-height: 2;
+  padding-right: 5px;
+}
+.modal__genres span::before{
+  content: "#"
+}
 
 @media screen and (max-width: 768px) {
   .modal{
@@ -70,5 +78,8 @@
   }
   .modal__overview{
     font-size: 16px;
+  }
+  .modal__genres span{
+    font-size: 12px;
   }
 }

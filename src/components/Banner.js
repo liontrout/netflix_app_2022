@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from '../api/axios';
 import requests from '../api/requests';
 import styled from 'styled-components';
@@ -11,7 +12,8 @@ function Banner() {
   useEffect(() => {
     fetchData();
   }, []);
-  
+
+  const navigate = useNavigate();
 
   const fetchData = async () => {
     // 현재 상영 중인 영화 정보 20개 가져오기
@@ -38,6 +40,10 @@ function Banner() {
     } else {
       setIsClicked(true)
     }
+  }
+
+  const MoreBtn = () => {
+    navigate(`/${movie.id}`);
   }
 
   const truncate = (str, n) => {
@@ -69,7 +75,10 @@ function Banner() {
               className='banner__button play'
               onClick={onPlayBtn}
             >Play</button>
-            <button className='banner__button info'>More Information</button>
+            <button
+              className='banner__button info'
+              onClick={MoreBtn}
+            >More Information</button>
           </div>
           <p className="banner__description">
             {truncate(movie.overview, 100)}

@@ -2,11 +2,11 @@ import React, { useRef } from 'react';
 import useOnClickOutside from '../hooks/useOnClickOutside';
 import '../styles/MovieModal.css';
 
-function MovieModal({backdrop_path, title, overview, name, release_date, first_air_date, vote_average, setModalOpen}) {
+function MovieModal({backdrop_path, title, overview, name, release_date, first_air_date, vote_average, setModalOpen, genres}) {
   const ref = useRef();
 
   useOnClickOutside(ref, () => {setModalOpen(false);});
-
+console.log("genres", {genres});
   return (
     <div className="presentation">
       <div className="wrapper-modal">
@@ -27,6 +27,13 @@ function MovieModal({backdrop_path, title, overview, name, release_date, first_a
             <h2 className="modal__title">{title ? title : name}</h2>
             <p className="modal__details">평점: {vote_average}</p>
             <p className="modal__overview">{overview}</p>
+            <p className="modal__genres">
+              {genres && genres.map((genre) => (
+                <span>
+                  {genre}
+                </span>
+              ))}
+            </p>
           </div>
         </div>
       </div>

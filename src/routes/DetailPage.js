@@ -19,7 +19,7 @@ function DetailPage() {
   useEffect(() => {
     fetchData();
   }, [movieId]);
-  
+
   if (!movie) return <div>...loading</div>
   return (
     <section>
@@ -36,6 +36,13 @@ function DetailPage() {
         <h2 className="modal__title">{movie.title ? movie.title : movie.name}</h2>
         <p className="modal__details">평점: {movie.vote_average}</p>
         <p className="modal__overview">{movie.overview}</p>
+        <p className="modal__genres">
+          {movie.genres && movie.genres.map((genre) => (
+            <span key={genre.id}>
+              {genre.name}
+            </span>
+          ))}
+        </p>
       </div>
     </section>
   )
