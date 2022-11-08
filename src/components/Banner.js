@@ -50,7 +50,7 @@ function Banner() {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
 
-  const timeOut = setTimeout(() => {
+  setTimeout(() => {
     if (isClicked && movie.videos.results.length === 0) {
       window.location.reload();
     }

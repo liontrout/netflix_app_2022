@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import axios from '../api/axios';
 import MovieModal from './MovieModal';
 import '../styles/Row.css';
@@ -14,15 +14,16 @@ function Row({isLargeRow, title, id, fetchUrl}) {
   const [modalOpen, setModalOpen] = useState(false);
   const [movieSelected, setMovieSelected] = useState({});
 
-  useEffect(() => {
-    fetchMovieData();
-  }, [fetchUrl]);
   
-  const fetchMovieData = async () => {
+  const fetchMovieData = useCallback (async () => {
     const request = await axios.get(fetchUrl);
     // console.log(request);
     setMovies(request.data.results);
-  }
+  }, [fetchUrl]);
+  
+  useEffect(() => {
+    fetchMovieData();
+  }, [fetchMovieData]);
 
   const handleClick = (movie) => {
     setModalOpen(true);
@@ -36,7 +37,6 @@ function Row({isLargeRow, title, id, fetchUrl}) {
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         loop={true} // loop 기능을 사용할 것인지
-        initialSlide={5}
         breakpoints={{
           1378: {
             slidesPerView: 6, // 한번에 보이는 슬라이드 개수
