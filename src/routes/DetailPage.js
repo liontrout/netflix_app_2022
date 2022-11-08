@@ -7,12 +7,12 @@ function DetailPage() {
   const [movie, setMovie] = useState({});
 
   let {movieId} = useParams();
-  console.log("movieId", movieId);
-  console.log("useParams()", useParams());
+  // console.log("movieId", movieId);
+  // console.log("useParams()", useParams());
 
   const fetchData = async () => {
     const request = await axios.get(`/movie/${movieId}`);
-    console.log("request", request);
+    // console.log("request", request);
     setMovie(request.data);
   }
 

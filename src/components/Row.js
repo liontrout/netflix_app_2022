@@ -13,7 +13,7 @@ function Row({isLargeRow, title, id, fetchUrl}) {
   const [movies, setMovies] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [movieSelected, setMovieSelected] = useState({});
-console.log(movies)
+
   useEffect(() => {
     fetchMovieData();
   }, [fetchUrl]);
@@ -36,6 +36,7 @@ console.log(movies)
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         loop={true} // loop 기능을 사용할 것인지
+        initialSlide={5}
         breakpoints={{
           1378: {
             slidesPerView: 6, // 한번에 보이는 슬라이드 개수
@@ -66,11 +67,10 @@ console.log(movies)
               className="arrow"
             >{"<"}</span>
           </div> */}
-          <div id={id} className="row__posters">
+          <div className="row__posters">
             {movies.map(movie => (
-              <SwiperSlide>
+              <SwiperSlide key={movie.id}>
                 <img
-                  key={movie.id}
                   className={`row__poster ${isLargeRow && "row__posterLarge"}`}
                   src={`https://image.tmdb.org/t/p/original/${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
                   alt={movie.title || movie.name || movie.original_name}

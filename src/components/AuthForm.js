@@ -85,7 +85,7 @@ function AuthForm() {
       <span onClick={toggleAccount} className='authSwitch'>{newAccount ? "로그인" : "회원가입"}</span>
       <div className='authBtns'>
         <button onClick={onSocialClick} name="google" className='authBtn'>
-          구글 계정으로 로그인 <i class="fa-brands fa-google"></i>
+          구글 계정으로 로그인 <i className="fa-brands fa-google"></i>
         </button>
       </div>
     </div>

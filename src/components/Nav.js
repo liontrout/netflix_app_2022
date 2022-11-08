@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { authService } from "../fbase";
 import '../styles/Nav.css';
 
 function Nav() {
@@ -37,15 +36,6 @@ function Nav() {
     }
   }
 
-  const OnLogOutClick = () => {
-    const ok = window.confirm("로그아웃 하시겠습니까?");
-    if (ok) {
-      authService.signOut();
-      navigate('/');
-      window.location.reload();
-    }
-  }
-
   return (
     <nav className={`nav ${show && "nav__black"}`}>
       <img
@@ -67,10 +57,10 @@ function Nav() {
         className="nav__input"
       />
       <img
-        src="https://occ-0-4796-988.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABbme8JMz4rEKFJhtzpOKWFJ_6qX-0y5wwWyYvBhWS0VKFLa289dZ5zvRBggmFVWVPL2AAYE8xevD4jjLZjWumNo.png?r=a41"
+        src="https://occ-0-993-988.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABfNXUMVXGhnCZwPI1SghnGpmUgqS_J-owMff-jig42xPF7vozQS1ge5xTgPTzH7ttfNYQXnsYs4vrMBaadh4E6RTJMVepojWqOXx.png?r=1d4"
         alt="user logged"
         className='nav__avatar'
-        onClick={OnLogOutClick}
+        onClick={() => {navigate("/profile")}}
       />
     </nav>
   )

@@ -55,7 +55,7 @@ function Banner() {
       window.location.reload();
     }
   }, 5000);
-  console.log(timeOut);
+
   if (!isClicked) {
     return (
       <header
@@ -104,7 +104,7 @@ function Banner() {
           ) : (
             <BannerError>
               <p>영상을 재생할 수 없습니다.</p>
-              <p>{timeOut}초 뒤에 홈으로 이동합니다.</p>
+              <p><span style={{color: "#e5e5e5"}}>5</span>초 뒤에 홈으로 이동합니다.</p>
             </BannerError>
           )}
         </HomeContainer>
@@ -134,7 +134,7 @@ const Iframe = styled.iframe`
 const BannerError = styled.div`
   position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
   font-size: 30px; font-weight: 600;
-  color: #fff;
+  color: #808080;
   text-align: center;
 `;
 

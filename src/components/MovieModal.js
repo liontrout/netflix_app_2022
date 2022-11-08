@@ -6,7 +6,7 @@ function MovieModal({backdrop_path, title, overview, name, release_date, first_a
   const ref = useRef();
 
   useOnClickOutside(ref, () => {setModalOpen(false);});
-console.log("genres", {genres});
+
   return (
     <div className="presentation">
       <div className="wrapper-modal">
