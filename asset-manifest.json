@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/netflix_app_2022/static/css/main.76f6b28c.css",
-    "main.js": "/netflix_app_2022/static/js/main.27bbf998.js",
+    "main.js": "/netflix_app_2022/static/js/main.b96e5b7e.js",
     "index.html": "/netflix_app_2022/index.html",
     "main.76f6b28c.css.map": "/netflix_app_2022/static/css/main.76f6b28c.css.map",
-    "main.27bbf998.js.map": "/netflix_app_2022/static/js/main.27bbf998.js.map"
+    "main.b96e5b7e.js.map": "/netflix_app_2022/static/js/main.b96e5b7e.js.map"
   },
   "entrypoints": [
     "static/css/main.76f6b28c.css",
-    "static/js/main.27bbf998.js"
+    "static/js/main.b96e5b7e.js"
   ]
 }
