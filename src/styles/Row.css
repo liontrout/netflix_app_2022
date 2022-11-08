@@ -1,11 +1,20 @@
 /* Row.css */
 .row{
-  margin: 30px 0 25px 20px;
+  margin: 0 20px 25px 20px;
   color: #fff;
 }
+.row:first-of-type{
+  margin-top: 40px;
+}
+.row:last-of-type{
+  padding-bottom: 20px;
+}
+
+/*
 .slider{
   position: relative;
 }
+*/
 
 .row__posters{
   display: flex;
@@ -22,7 +31,7 @@
   width: 100%; max-height: 144px;
   object-fit: contain;
   margin-left: 10px;
-  border-radius: 4px;
+  padding-top: 10px;
   transition: transform 450ms ease-out 0s;
 }
 .row__poster:nth-of-type(1){
@@ -35,10 +44,11 @@
   max-height: 320px;
 }
   .row__posterLarge:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
-/* .slider__arrow{
+/*
+.slider__arrow{
   z-index: 1000;
   position: absolute; top: 0;
   display: flex; justify-content: center; align-items: center;
@@ -66,7 +76,8 @@
 }
   .arrow:hover{
     transform: scale(1.5);
-  } */
+  }
+*/
 
 @media screen and (min-width: 1200px) {/* 1200 ~ 최대 */
   .row__poster{
@@ -88,12 +99,17 @@
 
 /* swiper */
 .swiper{
-  overflow: visible !important;
+  padding-bottom: 35px !important;
+}
+.swiper-slide{
+  height: auto;
 }
 .swiper-button-prev{
+  top: 40% !important;
   color: #fff !important;
 }
 .swiper-button-next{
+  top: 40% !important;
   color: #fff !important;
 }
 .swiper-button-next::after, .swiper-button-prev::after{
@@ -105,11 +121,12 @@
   }
 
 .swiper-pagination{
-  transform: translateY(30px) !important;
+  position: absolute !important; left: calc(50% - 75px) !important;
+  width: 150px !important;
   transition: all 300ms ease-in-out 0s !important;
 }
   .swiper-pagination:hover{
-    transform: translateY(30px) scale(1.1) !important;
+    transform: scale(1.1) !important;
   }
 .swiper-pagination-bullet{
   background: #808080 !important;
