@@ -19,6 +19,7 @@ function Row({isLargeRow, title, fetchUrl}) {
     // console.log(request);
     setMovies(request.data.results);
   }, [fetchUrl]);
+  // console.log(movies)
 
   /*
     const fetchMovieData = useCallback (async () => {
@@ -30,9 +31,13 @@ function Row({isLargeRow, title, fetchUrl}) {
       ].id;
 
       const {data: movieDetail} = await axios.get(`${"movie" || "discover/movie" || "discover/tv" || "trending/all"}${"/" || "?"}${movieId}`, {params: {append_to_response: "videos"}});
-      setMovies(movieDetail);
+      
+      const all = [movieDetail]
+      setMovies(all);
+      console.log(all);
     }, [fetchUrl]);
   */
+
   
   useEffect(() => {
     fetchMovieData();
